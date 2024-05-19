@@ -1,0 +1,7 @@
+import json 
+import akshare as ak
+
+index_stock_cons_df = ak.index_stock_cons(symbol="000300")
+stock_dict = {row['品种代码']: row['品种名称'] for _, row in index_stock_cons_df.iterrows()}
+with open('stock_dict.json', 'w') as json_file:
+    json.dump(stock_dict, json_file)
