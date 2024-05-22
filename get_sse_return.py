@@ -33,8 +33,5 @@ else:
     sse_daily_values = None
 
 dates = sse_hist_data.index
-df= pd.read_csv('all_stock_daily_return.csv')
-df_001 = pd.DataFrame({'sse_daily_return':sse_daily_values},index = dates)
-df = pd.concat([df,df_001,axis=1])
-print(df)
-# df.to_csv('sse_daily_return.csv',encoding='utf-8-sig')
+df = pd.DataFrame({'sse_daily_return':sse_daily_values},index = dates)
+df.to_csv('sse_daily_return.csv',encoding='utf-8-sig')
