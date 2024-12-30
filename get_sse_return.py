@@ -34,4 +34,7 @@ else:
 
 dates = sse_hist_data.index
 df = pd.DataFrame({'sse_daily_return':sse_daily_values},index = dates)
-df.to_csv('sse_daily_return.csv',encoding='utf-8-sig')
+df.to_csv('sse_daily_return.csv',encoding='utf-8-sig',index=dates)
+
+
+
